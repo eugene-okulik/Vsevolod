@@ -1,13 +1,13 @@
-def func_calc(*args):
-    def wrapper(first, second, operation):
+def func_calc(func):
+    def wrapper(first, second):
         if first < 0 or second < 0:
-            print(first * second)
-        elif first > second:
-            print(first - second)
-        elif first < second:
-            print(first / second)
-        elif first == second:
-            print(first + second)
+            func(first, second, '*')
+        if first == second:
+            func(first, second, '+')
+        if first > second:
+            func(first, second, '-')
+        if first < second:
+            func(first, second, '/')
 
     return wrapper
 
@@ -15,13 +15,13 @@ def func_calc(*args):
 @func_calc
 def calc(first, second, operation):
     if operation == '+':
-        return first + second
+        print(first + second)
     elif operation == '-':
-        return first - second
+        print(first - second)
     elif operation == '/':
-        return first / second
+        print(first / second)
     else:
-        return first * second
+        print(first * second)
 
 
-calc(4, 5, '+')
+calc(5, 5)

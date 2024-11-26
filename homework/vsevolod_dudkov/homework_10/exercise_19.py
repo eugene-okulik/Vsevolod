@@ -1,7 +1,7 @@
 def repeat_me(count):
     def actual_decorator(func):
         def wrapper(*args, **kwargs):
-            for i in range(0, count):
+            for _ in range(0, count):
                 func(*args, **kwargs)
 
         return wrapper
