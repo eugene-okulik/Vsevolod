@@ -65,7 +65,7 @@ first_text_book = TextBook('Алгебра', 'Иванов', 222,
 second_text_book = TextBook('Русский язык', 'Петров', 386,
                             'Русский язык', 7, True, 777, True)
 third_text_book = TextBook('Биология', 'Сидоров', 400,
-                            'Биология', 11, True, 4444, False)
+                           'Биология', 11, True, 4444, False)
 
 first_book.print()
 second_book.print()
